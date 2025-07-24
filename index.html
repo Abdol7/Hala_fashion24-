@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ازياء هاله | روابط التواصل الاجتماعي</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f8f3ff 0%, #f0e7ff 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #5a4a6a;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 900px;
+            background: white;
+            border-radius: 25px;
+            box-shadow: 0 15px 35px rgba(138, 83, 255, 0.15);
+            overflow: hidden;
+            text-align: center;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #8a53ff 0%, #6a3bcc 100%);
+            padding: 40px 20px 30px;
+            color: white;
+            position: relative;
+        }
+        
+        .logo-circle {
+            width: 120px;
+            height: 120px;
+            background: white;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            border: 5px solid #f8f3ff;
+        }
+        
+        .logo-circle i {
+            font-size: 60px;
+            color: #8a53ff;
+        }
+        
+        h1 {
+            font-size: 42px;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+            color: #e6d9ff;
+        }
+        
+        .social-section {
+            padding: 40px 30px;
+        }
+        
+        .section-title {
+            font-size: 32px;
+            color: #5a4a6a;
+            margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, #8a53ff, #ff6b8a);
+            border-radius: 2px;
+        }
+        
+        .social-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px auto;
+            max-width: 800px;
+        }
+        
+        .social-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px 20px;
+            box-shadow: 0 10px 25px rgba(138, 83, 255, 0.1);
+            transition: all 0.4s ease;
+            border: 2px solid #f0e7ff;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .social-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(138, 83, 255, 0.2);
+            border-color: #d9c8ff;
+        }
+        
+        .social-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+        }
+        
+        .tiktok-card::before {
+            background: linear-gradient(to right, #000000, #7a7a7a);
+        }
+        
+        .instagram-card::before {
+            background: linear-gradient(to right, #833ab4, #e1306c, #fd1d1d);
+        }
+        
+        .facebook-card::before {
+            background: linear-gradient(to right, #1877f2, #4a9cff);
+        }
+        
+        .social-icon {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 40px;
+            transition: all 0.3s ease;
+        }
+        
+        .tiktok-icon {
+            background: rgba(0, 0, 0, 0.05);
+            color: #000;
+        }
+        
+        .instagram-icon {
+            background: rgba(225, 48, 108, 0.05);
+            color: #e1306c;
+        }
+        
+        .facebook-icon {
+            background: rgba(24,
