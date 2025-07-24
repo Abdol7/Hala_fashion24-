@@ -1,0 +1,46 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HALA FASHION</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #b28d8d;
+      color: #2f2f2f;
+      text-align: center;
+      padding: 50px 20px;
+    }
+    .logo {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .links a {
+      display: block;
+      margin: 15px 0;
+      padding: 10px 15px;
+      background-color: #fff;
+      color: #b28d8d;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 18px;
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+      transition: background-color 0.2s;
+    }
+    .links a:hover {
+      background-color: #f8e6e6;
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">HALA FASHION</div>
+  <div class="links">
+    <a href="https://www.instagram.com/hala_fashion24?igsh=bW9ocnZ6eWpzcWNh" target="_blank">Instagram</a>
+    <a href="https://www.tiktok.com/@hala_fashion24?_t=ZS-8yHAY5zWFGx&_r=1" target="_blank">TikTok</a>
+    <a href="https://www.facebook.com/share/16FEbtXkkx/" target="_blank">Facebook</a>
+  </div>
+</body>
+</html>
