@@ -1,125 +1,509 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>Hala Fashion | روابط التواصل الاجتماعي</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #001f3f;
-      color: #D4AF37;
-      margin: 0;
-      padding: 0;
-      position: relative;
-      overflow-x: hidden;
-    }
-
-    /* الخلفية الشبه شفافة */
-    .bg-logo {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      opacity: 0.07;
-      z-index: 0;
-      width: 600px;
-      max-width: 90%;
-    }
-
-    /* اللوجو الزاوية */
-    .corner-logo {
-      position: absolute;
-      top: 15px;
-      right: 15px;
-      width: 90px;
-      z-index: 10;
-    }
-
-    .container {
-      position: relative;
-      z-index: 5;
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 40px;
-      margin-bottom: 10px;
-      color: #D4AF37;
-    }
-
-    h2 {
-      font-size: 18px;
-      color: #D4AF37;
-      margin-bottom: 50px;
-    }
-
-    .links {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 25px;
-    }
-
-    .link {
-      display: flex;
-      align-items: center;
-      background-color: #002b5c;
-      padding: 15px 25px;
-      border-radius: 12px;
-      width: 280px;
-      text-decoration: none;
-      color: #D4AF37;
-      transition: background-color 0.3s;
-    }
-
-    .link:hover {
-      background-color: #004080;
-    }
-
-    .link img {
-      width: 40px;
-      height: 40px;
-      margin-right: 15px;
-      border-radius: 8px;
-    }
-
-    footer {
-      margin-top: 60px;
-      font-size: 14px;
-      color: #D4AF37;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hala Fashion | روابط التواصل الاجتماعي</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+            font-family: 'Cairo', sans-serif; 
+        }
+        
+        body { 
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            padding: 20px; 
+            color: #e6e6e6; 
+            overflow-x: hidden;
+        }
+        
+        .container { 
+            width: 100%; 
+            max-width: 900px; 
+            background: rgba(255, 255, 255, 0.05); 
+            border-radius: 25px; 
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5); 
+            overflow: hidden; 
+            text-align: center; 
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            z-index: 1;
+        }
+        
+        header { 
+            background: linear-gradient(135deg, #0f3460 0%, #1a1a2e 100%); 
+            padding: 40px 20px 30px; 
+            color: white; 
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIxMCIgaGVpZ2h0PSIxMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjA1KSIgLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjcGF0dGVybikiIC8+PC9zdmc+');
+            opacity: 0.3;
+            z-index: -1;
+        }
+        
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .brand-logo {
+            text-align: center;
+            margin-bottom: 15px;
+            line-height: 1.2;
+            position: relative;
+            padding: 25px 40px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            border: 2px solid rgba(248, 181, 0, 0.3);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        .brand-logo h1 {
+            font-size: 58px;
+            font-weight: 900;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .brand-logo h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #f8b500;
+            letter-spacing: 2px;
+            position: relative;
+            z-index: 2;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle { 
+            font-size: 22px; 
+            max-width: 700px; 
+            margin: 0 auto; 
+            line-height: 1.6; 
+            color: #a3b1c6; 
+            position: relative;
+            z-index: 2;
+            padding: 0 20px;
+        }
+        
+        .social-section { 
+            padding: 40px 30px; 
+        }
+        
+        .section-title { 
+            font-size: 36px; 
+            color: #f8b500; 
+            margin-bottom: 40px; 
+            position: relative; 
+            display: inline-block; 
+            font-weight: 800;
+        }
+        
+        .section-title::after { 
+            content: ''; 
+            position: absolute; 
+            bottom: -10px; 
+            left: 50%; 
+            transform: translateX(-50%); 
+            width: 100px; 
+            height: 5px; 
+            background: linear-gradient(to right, #f8b500, #ff6b8a); 
+            border-radius: 3px; 
+        }
+        
+        .social-links { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 30px; 
+            margin: 40px auto; 
+            max-width: 800px; 
+        }
+        
+        .social-card { 
+            background: rgba(255, 255, 255, 0.08); 
+            border-radius: 20px; 
+            padding: 30px 20px; 
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); 
+            transition: all 0.4s ease; 
+            border: 1px solid rgba(255, 255, 255, 0.1); 
+            position: relative; 
+            overflow: hidden; 
+            backdrop-filter: blur(5px);
+        }
+        
+        .social-card:hover { 
+            transform: translateY(-10px); 
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5); 
+            border-color: rgba(248, 181, 0, 0.3); 
+            background: rgba(255, 255, 255, 0.12); 
+        }
+        
+        .social-card::before { 
+            content: ''; 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 5px; 
+        }
+        
+        .tiktok-card::before { 
+            background: linear-gradient(to right, #000000, #7a7a7a); 
+        }
+        
+        .instagram-card::before { 
+            background: linear-gradient(to right, #833ab4, #e1306c, #fd1d1d); 
+        }
+        
+        .facebook-card::before { 
+            background: linear-gradient(to right, #1877f2, #4a9cff); 
+        }
+        
+        .social-icon { 
+            width: 100px; 
+            height: 100px; 
+            border-radius: 50%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            margin: 0 auto 25px; 
+            font-size: 45px; 
+            transition: all 0.3s ease; 
+            background: rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .tiktok-icon { 
+            background: rgba(0, 0, 0, 0.2); 
+            color: #fff; 
+        }
+        
+        .instagram-icon { 
+            background: rgba(225, 48, 108, 0.15); 
+            color: #fff; 
+        }
+        
+        .facebook-icon { 
+            background: rgba(24, 119, 242, 0.15); 
+            color: #fff; 
+        }
+        
+        .social-card:hover .social-icon { 
+            transform: scale(1.1); 
+        }
+        
+        .social-name { 
+            font-size: 24px; 
+            font-weight: 700; 
+            margin-bottom: 15px; 
+            color: #fff; 
+        }
+        
+        .social-username { 
+            font-size: 20px; 
+            color: #f8b500; 
+            margin-bottom: 25px; 
+            font-weight: 600; 
+        }
+        
+        .btn { 
+            display: inline-block; 
+            padding: 14px 35px; 
+            background: linear-gradient(to right, #f8b500, #ff9800); 
+            color: #1a1a2e; 
+            border-radius: 30px; 
+            text-decoration: none; 
+            font-weight: 700; 
+            font-size: 20px; 
+            transition: all 0.3s ease; 
+            box-shadow: 0 5px 15px rgba(248, 181, 0, 0.3); 
+            border: none;
+            cursor: pointer;
+            letter-spacing: 1px;
+        }
+        
+        .btn:hover { 
+            transform: translateY(-3px); 
+            box-shadow: 0 8px 20px rgba(248, 181, 0, 0.4); 
+            background: linear-gradient(to right, #ffa502, #ff7b00); 
+        }
+        
+        footer { 
+            background: rgba(10, 15, 30, 0.7); 
+            padding: 25px; 
+            text-align: center; 
+            color: #a3b1c6; 
+            font-size: 18px; 
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .social-footer { 
+            display: flex; 
+            justify-content: center; 
+            gap: 25px; 
+            margin-top: 20px; 
+        }
+        
+        .social-footer a { 
+            color: #f8b500; 
+            font-size: 24px; 
+            transition: all 0.3s ease; 
+        }
+        
+        .social-footer a:hover { 
+            color: #ff9800; 
+            transform: translateY(-3px); 
+        }
+        
+        @media (max-width: 768px) { 
+            .social-links { grid-template-columns: 1fr; } 
+            .brand-logo h1 { font-size: 42px; } 
+            .brand-logo h2 { font-size: 24px; }
+            .subtitle { font-size: 18px; } 
+            .section-title { font-size: 30px; } 
+            .social-icon { 
+                width: 80px; 
+                height: 80px; 
+                font-size: 35px; 
+            }
+        }
+        
+        /* Animation for logo */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .brand-logo {
+            animation: float 4s ease-in-out infinite;
+        }
+        
+        /* Gold accents */
+        .gold-accent {
+            color: #f8b500;
+            font-weight: 700;
+        }
+        
+        /* Fashion elements */
+        .fashion-element {
+            position: absolute;
+            z-index: 0;
+            opacity: 0.1;
+        }
+        
+        .fashion-element-1 {
+            top: 10%;
+            left: 5%;
+            font-size: 140px;
+            transform: rotate(-30deg);
+        }
+        
+        .fashion-element-2 {
+            bottom: 20%;
+            right: 5%;
+            font-size: 120px;
+            transform: rotate(25deg);
+        }
+        
+        .fashion-element-3 {
+            top: 40%;
+            right: 10%;
+            font-size: 100px;
+            transform: rotate(15deg);
+        }
+        
+        .fashion-element-4 {
+            bottom: 30%;
+            left: 10%;
+            font-size: 110px;
+            transform: rotate(-15deg);
+        }
+        
+        /* Decorative pattern */
+        .decorative-pattern {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border: 3px solid rgba(248, 181, 0, 0.2);
+            border-radius: 50%;
+            z-index: -1;
+        }
+        
+        .pattern-1 {
+            top: -100px;
+            left: -100px;
+        }
+        
+        .pattern-2 {
+            bottom: -100px;
+            right: -100px;
+        }
+        
+        /* Glitter effect */
+        .glitter {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #f8b500;
+            border-radius: 50%;
+            opacity: 0.7;
+            animation: glitter 3s infinite;
+        }
+        
+        @keyframes glitter {
+            0% { opacity: 0.3; transform: scale(0.5); }
+            50% { opacity: 1; transform: scale(1); }
+            100% { opacity: 0.3; transform: scale(0.5); }
+        }
+    </style>
 </head>
 <body>
-  <!-- اللوجو الخلفية الشبه شفافة -->
-  <img src="https://i.ibb.co/zPFNntc/hala-fashion-logo-gold.png" alt="Hala Logo Background" class="bg-logo">
-
-  <!-- اللوجو في الزاوية -->
-  <img src="https://i.ibb.co/zPFNntc/hala-fashion-logo-gold.png" alt="Hala Logo" class="corner-logo">
-
-  <div class="container">
-    <h1>HALA FASHION</h1>
-    <h2>SUDANESE FASHION</h2>
-
-    <div class="links">
-      <a class="link" href="https://www.instagram.com/hala_fashion24?igsh=bW9ocnZ6eWpzcWNh" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
-        Instagram
-      </a>
-      <a class="link" href="https://www.facebook.com/share/16FEbtXkkx/" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
-        Facebook
-      </a>
-      <a class="link" href="https://www.tiktok.com/@hala_fashion24?_t=ZS-8yHAY5zWFGx&_r=1" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/3046/3046122.png" alt="TikTok">
-        TikTok
-      </a>
+    <!-- Decorative fashion elements -->
+    <i class="fas fa-tshirt fashion-element fashion-element-1"></i>
+    <i class="fas fa-vest fashion-element fashion-element-2"></i>
+    <i class="fas fa-shoe-prints fashion-element fashion-element-3"></i>
+    <i class="fas fa-ring fashion-element fashion-element-4"></i>
+    
+    <!-- Decorative patterns -->
+    <div class="decorative-pattern pattern-1"></div>
+    <div class="decorative-pattern pattern-2"></div>
+    
+    <!-- Glitter effects -->
+    <div class="glitter" style="top: 20%; left: 15%;"></div>
+    <div class="glitter" style="top: 30%; right: 25%; animation-delay: 0.5s;"></div>
+    <div class="glitter" style="bottom: 40%; left: 30%; animation-delay: 1s;"></div>
+    <div class="glitter" style="bottom: 20%; right: 20%; animation-delay: 1.5s;"></div>
+    
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <div class="brand-logo">
+                    <h1>HALA FASHION</h1>
+                    <h2>SUDANESE FASHION</h2>
+                </div>
+            </div>
+            <p class="subtitle">أحدث صيحات الموضة والأزياء لعام 2024. اكتشفوا تشكيلاتنا الحصرية وعروضنا المميزة</p>
+        </header>
+        
+        <div class="social-section">
+            <h2 class="section-title">تواصلوا معنا</h2>
+            
+            <div class="social-links">
+                <div class="social-card tiktok-card">
+                    <div class="social-icon tiktok-icon">
+                        <i class="fab fa-tiktok"></i>
+                    </div>
+                    <h3 class="social-name">تيك توك</h3>
+                    <p class="social-username">@hala_fashion24</p>
+                    <a href="https://www.tiktok.com/@hala_fashion24?_t=ZS-8yHAY5zWFGx&_r=1" target="_blank" class="btn">
+                        تابعونا الآن
+                    </a>
+                </div>
+                
+                <div class="social-card instagram-card">
+                    <div class="social-icon instagram-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <h3 class="social-name">انستجرام</h3>
+                    <p class="social-username">@hala_fashion24</p>
+                    <a href="https://www.instagram.com/hala_fashion24?igsh=bW9ocnZ6eWpzcWNh" target="_blank" class="btn">
+                        تابعونا الآن
+                    </a>
+                </div>
+                
+                <div class="social-card facebook-card">
+                    <div class="social-icon facebook-icon">
+                        <i class="fab fa-facebook"></i>
+                    </div>
+                    <h3 class="social-name">فيسبوك</h3>
+                    <p class="social-username">Hala Fashion</p>
+                    <a href="https://www.facebook.com/share/16FEbtXkkx/" target="_blank" class="btn">
+                        تابعونا الآن
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>جميع الحقوق محفوظة © <span class="gold-accent">Hala Fashion</span> 2024</p>
+            <div class="social-footer">
+                <a href="https://www.tiktok.com/@hala_fashion24?_t=ZS-8yHAY5zWFGx&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.instagram.com/hala_fashion24?igsh=bW9ocnZ6eWpzcWNh" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/share/16FEbtXkkx/" target="_blank"><i class="fab fa-facebook"></i></a>
+            </div>
+        </footer>
     </div>
-
-    <footer>
-      &copy; 2025 Hala Fashion. All rights reserved.
-    </footer>
-  </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.social-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 300 * index);
+            });
+            
+            // Add shimmer effect to logo
+            const logo = document.querySelector('.brand-logo');
+            setInterval(() => {
+                logo.style.textShadow = '0 0 15px rgba(248, 181, 0, 0.8)';
+                setTimeout(() => {
+                    logo.style.textShadow = '0 0 25px rgba(248, 181, 0, 1)';
+                }, 500);
+            }, 2000);
+            
+            // Add floating effect to decorative elements
+            const elements = document.querySelectorAll('.fashion-element');
+            elements.forEach((el, idx) => {
+                el.style.animation = `float ${4 + idx}s ease-in-out infinite`;
+            });
+            
+            // Create random glitter effects
+            for (let i = 0; i < 10; i++) {
+                const glitter = document.createElement('div');
+                glitter.className = 'glitter';
+                glitter.style.top = `${Math.random() * 100}%`;
+                glitter.style.left = `${Math.random() * 100}%`;
+                glitter.style.animationDelay = `${Math.random() * 2}s`;
+                document.body.appendChild(glitter);
+            }
+        });
+    </script>
 </body>
 </html>
